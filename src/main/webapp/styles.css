@@ -1,0 +1,127 @@
+
+html {
+    background: khaki;
+}
+
+#kontener {
+    width: 90%;
+    margin: auto;
+    font-family: "Tahoma", "sans-serif";
+    font-size: 1rem;
+
+}
+
+#naglowek {
+    width: 100%;
+    background: lightskyblue;
+    text-align: center;
+    font-size: 2.5rem;
+    height: 125px;
+}
+
+#naglowek h1 {
+    margin: 0;
+    padding-top: 1rem;
+}
+
+#srodek {
+    margin-top: 1rem;
+
+}
+
+#stopka {
+    background: lightskyblue;
+    color: white;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+#menu {
+    width: 9rem;
+    margin-bottom: 1.2rem;
+    float: left;
+}
+
+#tresc {
+    background: lightblue;
+    padding: 0.5rem;
+    margin-left: 11rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+
+}
+
+#newsy {
+    background: lightseagreen;
+    padding: 0 0.3rem 0.3rem;
+}
+#news1{
+
+    background: lightblue;
+    border: 0.5px solid black;
+}
+#news2{
+    background: lightblue;
+    border: 0.5px solid black;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    list-style: none;
+    font-size: 90%;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    background: lightblue;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#menu a:hover {
+    color: white;
+    background: lightseagreen;
+}
+
+#stopka {
+    clear: both;
+    background: aqua;
+    color: black;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+    #menu {
+        width: 100%;
+        padding: 0;
+    }
+
+    #tresc {
+        margin-left: 0;
+        clear: both;
+    }
+
+    #newsy {
+        text-align: center;
+        background: lightseagreen;
+    }
+
+    #kontener {
+        min-width: 320px;
+        width: 100%;
+    }
+    #naglowek{
+        font-size: 1.75rem;
+    }
+
+}
+

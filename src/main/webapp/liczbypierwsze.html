@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>TI-Lab1</title>
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <script type="text/javascript"  src="script.js"></script>
+  <script defer type="text/javascript" src="pierwsze.js"></script>
+</head>
+<body onload="funkcje(); zegarek(); setInterval(zegarek, 1000);">
+<div id="kontener">
+  <div id="naglowek">
+    <h1>Nagłówek</h1>
+  </div>
+  <div id="srodek">
+    <div id="menu">
+      <div id ="menuToggle">
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="kwadratowe.html">ax<sup>2</sup>+bx+c=0</a></li>
+          <li><a href="liczbypierwsze.html">Liczby pierwsze</a></li>
+        </ul>
+      </div>
+      <div id="newsy">
+        <p id="news1"></p>
+        <p id="news2"></p>
+      </div>
+    </div>
+    <div id="tresc">
+      <form id="dane" name="dane">
+
+        Wypisz <input placeholder="liczba" type="number" id="prime" name ="primes"> liczb pierwszych<br/>
+
+        <div id = "przycisk">
+          <input type="button" id="licz" value="Oblicz">
+        </div>
+      </form>
+      <div id="lista">
+      </div>
+    </div>
+  </div>
+  <div id="stopka">
+    &copy;2023 SM
+  </div>
+</div>
+</body>
+</html>
