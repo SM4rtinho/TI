@@ -44,5 +44,19 @@ public class Tools {
 
         return pattern.replace("[["+marker+"]]", out.toString());
     }
+    public static String parsujStrone(String wejscie, String prawidlowe){
+        String wyjscie = "glowna";
+        String[] strony = prawidlowe.split(";");
+        if (wejscie==null){
+            wejscie="glowna";
+        }
+        for (String poprawna : strony ) {
+            if(wejscie.equals(poprawna)){
+                wyjscie = wejscie;
+                return wyjscie;
+            }
+        }
+        return wyjscie;
+    }
 
 }
