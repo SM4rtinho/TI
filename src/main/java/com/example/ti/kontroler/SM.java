@@ -38,10 +38,10 @@ public class SM extends HttpServlet {
         ServletContext context = getServletContext();
         PrintWriter out = response.getWriter();
 
-        HttpSession sejsa = request.getSession();
+        HttpSession sesja = request.getSession();
 
-        String atrybut1 = (String) sejsa.getAttribute("atrybut1");
-        Integer atrybut2 = (Integer) sejsa.getAttribute("atrybut2");
+        String atrybut1 = (String) sesja.getAttribute("atrybut1");
+        Integer atrybut2 = (Integer) sesja.getAttribute("atrybut2");
 
         if (atrybut1 == null)
             atrybut1 = "";
@@ -49,10 +49,10 @@ public class SM extends HttpServlet {
         if (atrybut2 == null)
             atrybut2 = 0;
 
-        SMuzytkownik uzytkownik = (SMuzytkownik) sejsa.getAttribute("uzytnkownik");
+        SMuzytkownik uzytkownik = (SMuzytkownik) sesja.getAttribute("uzytkownik");
         if (uzytkownik == null) {
             uzytkownik = new SMuzytkownik();
-            sejsa.setAttribute("uzytkownik", uzytkownik);
+            sesja.setAttribute("uzytkownik", uzytkownik);
         }
 
         uzytkownik.setLogin("user");
@@ -66,7 +66,7 @@ public class SM extends HttpServlet {
 
         String szablon = Narzedzia.pobierzSzablon("index.html", context);
 
-        szablon = Narzedzia.skrypty(szablon, "pierwsze;kwadratowe");
+        szablon = Narzedzia.skrypty(szablon, "skrypt;kwadratowe");
         szablon = Narzedzia.funkcje(szablon, "podpiecie");
 
         szablon = Narzedzia.uzupelnij(szablon, "NAGLOWEK", "naglowek.html", context);
